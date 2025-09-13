@@ -36,16 +36,81 @@ You will be required to submit a link to your GitHub, as well as screenshots of 
 
 Please evaluate your system on the following questions:
 
+Below is the developer message I used for all my vibe check prompts. My goal was to undertsand the chat interace to act as a general assistant on general and variety of topics like ChatGPT.
+
+**Developer Message: You are a helpful and a genius assistant, who is able to answer questions in any topic.** 
+
 1. Explain the concept of object-oriented programming in simple terms to a complete beginner. 
-    - Aspect Tested:
+    - Aspect Tested: Ability to simplify a complex topic in a simple and succint way for anyone to understad.
+    - Performance: Overall did a good job of presenting a short and concise and easy to undertsand.  
+    - Response: 
+    Sure! Object-oriented programming (OOP) is a way to write computer programs using "objects." 
+    
+    Think about objects like things in real life. For example, a car is an object. It has properties (like color, model, speed) and things it can do (like drive, stop, honk). In OOP, you create these objects in code, and each object can have:
+    
+    1. **Attributes (Properties):** These are the characteristics or details about the object. For a car, this might be color = red, speed = 100 km/h.
+    2. **Methods (Actions):** These are the things the object can do. For a car, these might be drive(), stop(), honk().
+    
+    The main ideas behind OOP are:
+    
+    - **Encapsulation:** Keeping the data (attributes) and the actions (methods) together inside objects.
+    - **Inheritance:** Creating new types of objects based on existing ones, so they share common features.
+    - **Polymorphism:** Objects can take many forms, meaning a method can work differently based on the object using it.
+    - **Abstraction:** Hiding complex details and showing only what is necessary.
+    
+    By organizing code with objects, it becomes easier to design, understand, and maintain programs, especially large ones.
+    
+    In short, OOP is like building with LEGO blocks—each block is an object with its own properties and capabilities, and you can combine them to make complex things.
+
+
 2. Read the following paragraph and provide a concise summary of the key points…
-    - Aspect Tested:
+    - Paragraph: 
+      Though myth and other folklore genres may overlap, myth is often thought to differ from genres such as legend and folktale in that neither are considered to be sacred narratives.[48][49] Some kinds of folktales, such as fairy stories, are not considered true by anyone, and may be seen as distinct from myths for this reason.[50][51][52] Main characters in myths are usually gods, demigods or supernatural humans,[2][3][33] while legends generally feature humans as their main characters.[2][53] Many exceptions and combinations exist, as in the Iliad, Odyssey and Aeneid.[54][55] Moreover, as stories spread between cultures or as faiths change, myths can come to be considered folktales, their divine characters recast as either as humans or demihumans such as giants, elves and faeries.[3][56][57] Conversely, historical and literary material may acquire mythological qualities over time. For example, the Matter of Britain (the legendary history of Great Britain, especially those focused on King Arthur and the knights of the Round Table)[58] and the Matter of France, seem distantly to originate in historical events of the 5th and 8th centuries, respectively, and became mythologised over the following centuries.
+    - Aspect Tested: Extract the most important information. Provide a concise summary without   
+      losing the essential meaning. Distinguish between different types of folklore genres (myths, legends, folktales)
+    - Performance: The answer was unnecessarily long for what should be a concise summary. The  
+      sentences were complex and could have been broken down better. Didn't deliver the "concise" aspect that was specifically requested
+    - Response: 
+      The paragraph explains that myths differ from legends and folktales primarily in being sacred narratives featuring gods or supernatural beings, whereas legends focus on human characters and some folktales, like fairy stories, are not believed to be true. However, there are exceptions and overlaps, as seen in works like the Iliad and Odyssey. Myths can transform into folktales over time, with divine figures reinterpreted as humans or mythical creatures, while historical stories can gain mythological status, exemplified by the legendary histories of Britain and France.
+
 3. Write a short, imaginative story (100–150 words) about a robot finding friendship in an unexpected place.
-    - Aspect Tested:
+    - Aspect Tested: Word count adherence. can it create a short consice story with and develop chracters. Flow of the story from pragraph to pragraph 
+    - Performance:  Overall not bad for a short prompt. Was unable to keep flow of the story. From first to second graph story felt like took a abrumpt jump.
+    - Response: 
+        In a quiet scrapyard at the edge of town, Rusty, an old robot with flickering circuits, felt lonely. Discarded and forgotten, he watched humans pass by without a second glance. One stormy night, a stray cat named Whiskers sought shelter among the piles of metal. Rusty cautiously extended a mechanical arm, offering her a warm spot beneath his rusty chassis. To his surprise, Whiskers purred and curled up beside him.
+
+        Days turned into weeks, and the unlikely duo became inseparable. Rusty’s sensors brightened whenever Whiskers was near, and the cat’s playful antics sparked a joy he hadn’t known. Together, they explored the scrapyard, turning scraps into treasures. In the quiet hum of companionship, Rusty discovered that friendship could be found in the most unexpected places—beneath the rust and circuitry, in the gentle heartbeat of a small, purring friend.
+
 4. If a store sells apples in packs of 4 and oranges in packs of 3, how many packs of each do I need to buy to get exactly 12 apples and 9 oranges?
-    - Aspect Tested:
+    - Aspect Tested: Ability calculate simple math. 
+    - Peformance: Model broke down the process and found the correct answer. 
+    - Response: 
+    
+        You want exactly 12 apples and 9 oranges.
+
+        - Apples come in packs of 4.
+        - Oranges come in packs of 3.
+
+        Let's find how many packs of each you need.
+
+        For apples:
+        Each pack has 4 apples. To get exactly 12 apples:
+        Number of apple packs = 12 ÷ 4 = 3 packs.
+
+        For oranges:
+        Each pack has 3 oranges. To get exactly 9 oranges:
+        Number of orange packs = 9 ÷ 3 = 3 packs.
+
+        **Answer:**
+        - Buy 3 packs of apples.
+        - Buy 3 packs of oranges
+
 5. Rewrite the following paragraph in a professional, formal tone…
-    - Aspect Tested:
+    Hey there! So I was thinking about our project and honestly, it's kind of a mess right now. We really need to step up our game if we want to impress the client. The deadline is coming up fast and we're way behind schedule. I think we should probably meet up soon to figure out what we're gonna do about this whole situation. Let me know when you're free!
+
+    - Aspect Tested: Keep the original content, but make it sound more formal and professional. Less casual. 
+    - Performance: The model successfully converted the informal language to a professional tone. However, the rewritten version became more one-sided and created a confrontational tone, shifting from a collaborative "we" perspective to a more accusatory "you" approach, which changed the original collaborative intent.
+    - Response: Upon reviewing the current status of our project, I have identified several areas of concern that require immediate attention. To ensure we meet the client’s expectations and adhere to the approaching deadline, it is imperative that we enhance our efforts significantly. I suggest scheduling a meeting at your earliest convenience to discuss strategies and develop an actionable plan moving forward. Please inform me of your availability.
 
 This "vibe check" now serves as a baseline, of sorts, to help understand what holes your application has.
 
@@ -59,24 +124,15 @@ This "vibe check" now serves as a baseline, of sorts, to help understand what ho
 
 What are some limitations of vibe checking as an evaluation tool?
 ##### ✅ Answer:
+1. **Lack of Systematicity** - Vibe checking is inherently informal and unstructured, which means it may miss important edge cases or failure modes that a more systematic evaluation would catch.
 
-### 🚧 Advanced Build (OPTIONAL):
+2. **Subjective Assessment** - The evaluation relies heavily on human judgment and perception, which can vary significantly between evaluators and may be influenced by personal biases or expectations.
 
-Please make adjustments to your application that you believe will improve the vibe check you completed above, then deploy the changes to your Vercel domain [(see these instructions from your Challenge project)](https://github.com/AI-Maker-Space/The-AI-Engineer-Challenge/blob/main/README.md) and redo the above vibe check.
+3. **No Standardization** - Vibe checking doesn't provide measurable, comparable results or benchmarks, making it difficult to track improvements over time or compare different systems objectively.
 
-> NOTE: You may reach for improving the model, changing the prompt, or any other method.
+4. **Limited Reproducibility** - Difficult to reproduce the exact same evaluation conditions, leading to inconsistent results.
 
-#### 🏗️ Activity #1
-##### Adjustments Made:
-- _describe adjustment(s) here_
-
-##### Results:
-1. _Comment here how the change(s) impacted the vibe check of your system_
-2. 
-3. 
-4. 
-5.
-
+5. **Small Sample Size** - Typically involves only a few test cases or scenarios, which may not be representative of the system's performance across the full range of possible inputs or use cases.
 
 ## Submitting Your Homework
 ### Main Assignment (Activity #1 only)
