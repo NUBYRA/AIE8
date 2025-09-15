@@ -7,8 +7,10 @@ import asyncio
 
 
 class EmbeddingModel:
-    def __init__(self, embeddings_model_name: str = "text-embedding-3-small", batch_size: int = 1024):
-        load_dotenv()
+    def __init__(self, embeddings_model_name: str = "text-embedding-3-small", dimensions: int = 1536, batch_size: int = 1024):
+        # Load .env from the AIE8 root directory
+        env_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), '.env')
+        load_dotenv(env_path, override=True)
         self.openai_api_key = os.getenv("OPENAI_API_KEY")
         self.async_client = AsyncOpenAI()
         self.client = OpenAI()
@@ -18,14 +20,16 @@ class EmbeddingModel:
                 "OPENAI_API_KEY environment variable is not set. Please set it to your OpenAI API key."
             )
         self.embeddings_model_name = embeddings_model_name
+        self.dimensions = dimensions
         self.batch_size = batch_size
+        
 
     async def async_get_embeddings(self, list_of_text: List[str]) -> List[List[float]]:
         batches = [list_of_text[i:i + self.batch_size] for i in range(0, len(list_of_text), self.batch_size)]
         
         async def process_batch(batch):
             embedding_response = await self.async_client.embeddings.create(
-                input=batch, model=self.embeddings_model_name
+                input=batch, model=self.embeddings_model_name, dimensions=self.dimensions
             )
             return [embeddings.embedding for embeddings in embedding_response.data]
         
@@ -37,21 +41,21 @@ class EmbeddingModel:
 
     async def async_get_embedding(self, text: str) -> List[float]:
         embedding = await self.async_client.embeddings.create(
-            input=text, model=self.embeddings_model_name
+            input=text, model=self.embeddings_model_name, dimensions=self.dimensions
         )
 
         return embedding.data[0].embedding
 
     def get_embeddings(self, list_of_text: List[str]) -> List[List[float]]:
         embedding_response = self.client.embeddings.create(
-            input=list_of_text, model=self.embeddings_model_name
+            input=list_of_text, model=self.embeddings_model_name, dimensions=self.dimensions
         )
 
         return [embeddings.embedding for embeddings in embedding_response.data]
 
     def get_embedding(self, text: str) -> List[float]:
         embedding = self.client.embeddings.create(
-            input=text, model=self.embeddings_model_name
+            input=text, model=self.embeddings_model_name, dimensions=self.dimensions
         )
 
         return embedding.data[0].embedding
